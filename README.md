@@ -1,3 +1,3 @@
 simulador de windows XP
 
-obs:**isso não é o código fonte!**
+obs:**isso é o código fonte!**
