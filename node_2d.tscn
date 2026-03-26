@@ -1,0 +1,582 @@
+[gd_scene format=3 uid="uid://co24vlm5oo2d"]
+
+[ext_resource type="Script" uid="uid://bf5ftwy432hah" path="res://node_2d.gd" id="1_e8dv2"]
+[ext_resource type="AudioStream" uid="uid://bdqoyug33t6xv" path="res://start.mp3" id="1_rj586"]
+[ext_resource type="Texture2D" uid="uid://dtk3ilijwoc2f" path="res://windows xp.jpeg" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://2gha5xvcfilq" path="res://taskbar.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://bu0ilxkwq5o82" path="res://startmenu.png" id="3_0hol4"]
+[ext_resource type="Texture2D" uid="uid://d3blnw054tcsa" path="res://taskbar+right.png" id="4_0hol4"]
+[ext_resource type="Texture2D" uid="uid://bi8lww6kyxtt4" path="res://MEMZicon1.svg" id="4_bjha6"]
+[ext_resource type="Script" uid="uid://bgjeq0cri4pd3" path="res://MEMZ.gd" id="5_gt76g"]
+[ext_resource type="Script" uid="uid://d1hvn3a4tq5s4" path="res://startmenu.gd" id="5_kdubu"]
+[ext_resource type="Texture2D" uid="uid://6wt2v6eriao7" path="res://openstartmenu.png" id="6_d21ai"]
+[ext_resource type="Script" uid="uid://o5fvpracyp7b" path="res://container.gd" id="6_rj586"]
+[ext_resource type="Script" uid="uid://cmixlv481voij" path="res://texture_rect.gd" id="8_4d7sh"]
+[ext_resource type="Script" uid="uid://d3277qbavmxve" path="res://notepad_button.gd" id="10_0h7mo"]
+[ext_resource type="Script" uid="uid://lvdp5yt2njd7" path="res://shutdown_button.gd" id="10_hqns4"]
+[ext_resource type="Texture2D" uid="uid://b0ct3yap3723u" path="res://notepad.webp" id="10_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://by0tf107ntk5j" path="res://internet-explorer-8-logo-png_seeklogo-169158.webp" id="12_flf07"]
+[ext_resource type="Script" uid="uid://got4vvl76aob" path="res://window.gd" id="12_x0ka3"]
+[ext_resource type="Script" uid="uid://chm6cg8wva8yw" path="res://bonzi.gd" id="13_fs4d3"]
+[ext_resource type="Script" uid="uid://cqngebyiy0p8d" path="res://control_painel.gd" id="14_nr8wp"]
+[ext_resource type="Texture2D" uid="uid://xuw4ub2hnfwu" path="res://arrow_d.png" id="15_ta5nu"]
+[ext_resource type="Script" uid="uid://c2h3pp1p33gbx" path="res://cursor.gd" id="16_flf07"]
+[ext_resource type="Texture2D" uid="uid://b0s2pxpmkquor" path="res://paint.webp" id="18_2u7jv"]
+[ext_resource type="Script" uid="uid://bq0nkksvvf0ik" path="res://internet_explorer.gd" id="18_k73cj"]
+[ext_resource type="Texture2D" uid="uid://q8c644yjnliu" path="res://bonzi.webp" id="19_rjqkl"]
+[ext_resource type="Script" uid="uid://cgk8vcdrrq5sy" path="res://bonzibuddy.gd" id="21_7vxoj"]
+[ext_resource type="Script" uid="uid://c6gxxkqsh8bcb" path="res://rich_text_label.gd" id="22_ei405"]
+[ext_resource type="Texture2D" uid="uid://dwtc0pbe2j5dt" path="res://windows-xp-horror-edition.webp" id="24_ornx7"]
+[ext_resource type="Texture2D" uid="uid://c4pq2wvtpxu1k" path="res://MEMZicon4.svg" id="25_mryly"]
+[ext_resource type="Script" uid="uid://bybmvpkocxrfd" path="res://explorer.gd" id="26_2hxjc"]
+[ext_resource type="Texture2D" uid="uid://cxw1pffhbtrrm" path="res://Windows-icon.webp" id="28_2u7jv"]
+[ext_resource type="Script" uid="uid://cwvhlusn7w75v" path="res://paint.gd" id="30_24dk6"]
+[ext_resource type="Script" uid="uid://bdkk4my25tkg0" path="res://control_i.gd" id="31_24dk6"]
+[ext_resource type="Script" uid="uid://cxt8gegr18yx" path="res://confirmation_dialog.gd" id="31_mryly"]
+[ext_resource type="Script" uid="uid://cteexhh3k7qad" path="res://screen.gd" id="34_cnnru"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4d7sh"]
+
+[node name="Node2D" type="Node2D" unique_id=720063040]
+script = ExtResource("1_e8dv2")
+max_icons = 35
+max_duplications = 0
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=763062802]
+
+[node name="Start" type="AudioStreamPlayer" parent="." unique_id=680192342]
+stream = ExtResource("1_rj586")
+volume_db = 6.804
+autoplay = true
+
+[node name="WindowsXp" type="Sprite2D" parent="." unique_id=1368193865]
+position = Vector2(577.5, 289.25)
+scale = Vector2(1.8217666, 1.650997)
+texture = ExtResource("1_wtcfe")
+
+[node name="MEMZ" type="Button" parent="." unique_id=1057545308]
+visible = false
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 177.0
+offset_bottom = 100.0
+text = "MEMZ"
+icon = ExtResource("4_bjha6")
+flat = true
+script = ExtResource("5_gt76g")
+
+[node name="Taskbar" type="Sprite2D" parent="." unique_id=581960629]
+position = Vector2(579.5, 614)
+scale = Vector2(2.9844158, 1.0262976)
+texture = ExtResource("2_epypp")
+
+[node name="Taskbar+right" type="Sprite2D" parent="." unique_id=127178049]
+position = Vector2(1067.0001, 614)
+scale = Vector2(1.844445, 2.2857144)
+texture = ExtResource("4_0hol4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=242967881]
+position = Vector2(104, 614)
+scale = Vector2(1.007, 1.0793656)
+texture = ExtResource("3_0hol4")
+
+[node name="Label" type="Label" parent="." unique_id=161234673]
+offset_left = 1024.0
+offset_top = 590.0
+offset_right = 1147.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 36
+text = "17:36"
+horizontal_alignment = 1
+language = "pt_BR"
+
+[node name="start" type="Button" parent="." unique_id=1582689493]
+offset_top = 580.0
+offset_right = 206.0
+offset_bottom = 650.0
+toggle_mode = true
+keep_pressed_outside = true
+flat = true
+script = ExtResource("5_kdubu")
+
+[node name="Control" type="Control" parent="." unique_id=1229259497]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2.0
+offset_top = 115.0
+offset_right = 479.0
+offset_bottom = 584.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1101773337]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 480.0
+offset_bottom = 470.0
+texture = ExtResource("6_d21ai")
+script = ExtResource("8_4d7sh")
+
+[node name="ShutdownButton" type="Button" parent="Control/TextureRect" unique_id=1250964419]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 393.0
+offset_right = 477.0
+offset_bottom = 461.0
+flat = true
+script = ExtResource("10_hqns4")
+
+[node name="NotepadButton" type="Button" parent="Control/TextureRect" unique_id=1815351690]
+layout_mode = 0
+offset_top = 67.0
+offset_right = 247.0
+offset_bottom = 146.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "notepad"
+flat = true
+script = ExtResource("10_0h7mo")
+
+[node name="Notepad" type="Sprite2D" parent="Control/TextureRect/NotepadButton" unique_id=70312944]
+position = Vector2(47, 41)
+scale = Vector2(0.37349984, 0.36096114)
+texture = ExtResource("10_x0ka3")
+
+[node name="PainelButton" type="Button" parent="Control/TextureRect" unique_id=1298350635]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 226.0
+offset_right = 477.0
+offset_bottom = 324.0
+flat = true
+
+[node name="LinkButton" type="LinkButton" parent="Control/TextureRect" unique_id=1099742960]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 330.0
+offset_right = 477.0
+offset_bottom = 358.0
+uri = "https://discord.gg/BJt93JCnGm"
+
+[node name="internet" type="Button" parent="Control/TextureRect" unique_id=1030520966]
+layout_mode = 0
+offset_top = 151.0
+offset_right = 249.0
+offset_bottom = 233.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "internet explorer"
+flat = true
+
+[node name="InternetExplorer8LogoPngSeeklogo169158" type="Sprite2D" parent="Control/TextureRect/internet" unique_id=296553227]
+position = Vector2(23, 45)
+scale = Vector2(0.12849998, 0.1315001)
+texture = ExtResource("12_flf07")
+
+[node name="Bonzi" type="Button" parent="Control/TextureRect" unique_id=1920287932]
+visible = false
+layout_mode = 0
+offset_top = 218.0
+offset_right = 249.0
+offset_bottom = 283.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "bonzi"
+flat = true
+script = ExtResource("13_fs4d3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/TextureRect/Bonzi" unique_id=1132060016]
+position = Vector2(43, 31.999992)
+scale = Vector2(0.15999994, 0.10599998)
+texture = ExtResource("19_rjqkl")
+
+[node name="Button" type="Button" parent="Control/TextureRect" unique_id=401614191]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 62.0
+offset_right = 479.0
+offset_bottom = 224.0
+flat = true
+
+[node name="paintbutton" type="Button" parent="Control/TextureRect" unique_id=1481215742]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 305.0
+offset_right = 248.0
+offset_bottom = 398.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Paint"
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Control/TextureRect/paintbutton" unique_id=544562610]
+layout_mode = 0
+offset_top = 18.0
+offset_right = 83.0
+offset_bottom = 94.0
+texture = ExtResource("18_2u7jv")
+expand_mode = 1
+
+[node name="Button2" type="Button" parent="Control/TextureRect" unique_id=1178574237]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 357.0
+offset_right = 472.0
+offset_bottom = 386.0
+flat = true
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="Control/TextureRect/Button2" unique_id=56572743]
+ok_button_text = "OK"
+dialog_text = "Quer deletar seu sistema?"
+script = ExtResource("31_mryly")
+
+[node name="Container" type="Container" parent="Control" unique_id=1899632161]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 481.0
+offset_bottom = 471.0
+script = ExtResource("6_rj586")
+
+[node name="Popup" type="Popup" parent="Control/Container" unique_id=670332431]
+transparent_bg = true
+oversampling_override = 1.0
+position = Vector2i(0, 119)
+size = Vector2i(478, 465)
+
+[node name="ItemList" type="ItemList" parent="Control/Container" unique_id=504740205]
+clip_contents = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4d7sh")
+allow_search = false
+
+[node name="Window" type="Window" parent="." unique_id=928572102]
+oversampling_override = 1.0
+title = "notepad"
+position = Vector2i(492, 36)
+size = Vector2i(300, 300)
+visible = false
+wrap_controls = true
+popup_window = true
+popup_wm_hint = true
+content_scale_size = Vector2i(500, 500)
+script = ExtResource("12_x0ka3")
+
+[node name="TextEdit" type="TextEdit" parent="Window" unique_id=19177370]
+offset_right = 300.0
+offset_bottom = 299.0
+
+[node name="ControlPainel" type="Window" parent="." unique_id=1302432261]
+oversampling_override = 1.0
+title = "Control Painel"
+position = Vector2i(92, 36)
+size = Vector2i(700, 500)
+visible = false
+script = ExtResource("14_nr8wp")
+
+[node name="CheckButton" type="CheckButton" parent="ControlPainel" unique_id=402559922]
+offset_left = 12.0
+offset_top = 459.0
+offset_right = 129.0
+offset_bottom = 490.0
+button_pressed = true
+text = "antivírus"
+
+[node name="CursorButton" type="Button" parent="ControlPainel" unique_id=1353385926]
+offset_right = 100.0
+offset_bottom = 70.0
+text = "cursor"
+icon = ExtResource("15_ta5nu")
+flat = true
+
+[node name="Button" type="Button" parent="ControlPainel" unique_id=1199581490]
+offset_left = 142.0
+offset_top = 7.0
+offset_right = 684.0
+offset_bottom = 296.0
+theme_override_icons/icon = ExtResource("24_ornx7")
+text = "tela"
+flat = true
+
+[node name="cursor" type="Window" parent="." unique_id=53994713]
+oversampling_override = 1.0
+title = "cursor"
+position = Vector2i(492, 136)
+size = Vector2i(300, 400)
+visible = false
+script = ExtResource("16_flf07")
+
+[node name="Label" type="Label" parent="cursor" unique_id=1764371706]
+offset_top = 379.0
+offset_right = 240.0
+offset_bottom = 402.0
+text = "você não pode mudar o cursor!"
+
+[node name="TextureRect" type="TextureRect" parent="cursor" unique_id=1742036143]
+offset_left = 229.0
+offset_right = 299.0
+offset_bottom = 77.0
+texture = ExtResource("15_ta5nu")
+expand_mode = 1
+
+[node name="MenuButton" type="MenuButton" parent="cursor" unique_id=1878205872]
+offset_right = 224.0
+offset_bottom = 46.0
+text = "cursores"
+icon = ExtResource("25_mryly")
+flat = false
+item_count = 4
+popup/item_0/text = "Windows XP (padrão)"
+popup/item_0/icon = ExtResource("15_ta5nu")
+popup/item_0/id = 0
+popup/item_1/text = "Windows XP (estiloso)"
+popup/item_1/id = 1
+popup/item_2/text = "Windows 7"
+popup/item_2/id = 2
+popup/item_3/text = "Windows vista"
+popup/item_3/id = 3
+
+[node name="bonzi" type="Button" parent="." unique_id=181183178]
+visible = false
+offset_left = -5.0
+offset_top = 92.0
+offset_right = 276.0
+offset_bottom = 185.0
+text = "Bonzi Buddy"
+flat = true
+script = ExtResource("13_fs4d3")
+
+[node name="Sprite2D" type="Sprite2D" parent="bonzi" unique_id=830670751]
+position = Vector2(50.75, 44)
+scale = Vector2(0.197, 0.184)
+texture = ExtResource("19_rjqkl")
+
+[node name="internet explorer" type="Window" parent="." unique_id=616579534]
+oversampling_override = 1.0
+mode = 2
+title = "Internet Explorer"
+position = Vector2i(92, 36)
+size = Vector2i(700, 676)
+visible = false
+script = ExtResource("18_k73cj")
+
+[node name="Bonzi" type="Button" parent="internet explorer" unique_id=617864588]
+offset_left = 3.0
+offset_top = 82.0
+offset_right = 558.0
+offset_bottom = 590.0
+text = "instale!"
+icon = ExtResource("19_rjqkl")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="internet explorer" unique_id=507310334]
+offset_right = 700.0
+offset_bottom = 66.0
+texture = ExtResource("2_epypp")
+
+[node name="memz" type="Button" parent="internet explorer" unique_id=462350059]
+offset_left = 482.0
+offset_top = 575.0
+offset_right = 687.0
+offset_bottom = 682.0
+text = "MEMZ"
+icon = ExtResource("4_bjha6")
+flat = true
+
+[node name="Bonzi" type="Sprite2D" parent="." unique_id=1454828162]
+visible = false
+position = Vector2(819, 350)
+scale = Vector2(0.306, 0.316)
+texture = ExtResource("19_rjqkl")
+script = ExtResource("21_7vxoj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Bonzi" unique_id=632433861]
+offset_left = -284.31375
+offset_top = -509.49365
+offset_right = 382.35275
+offset_bottom = -155.06323
+theme_override_font_sizes/normal_font_size = 67
+script = ExtResource("22_ei405")
+
+[node name="explorer" type="Window" parent="." unique_id=206727523]
+oversampling_override = 1.0
+title = "Explorer"
+position = Vector2i(200, 30)
+size = Vector2i(800, 500)
+visible = false
+script = ExtResource("26_2hxjc")
+
+[node name="TextureRect" type="TextureRect" parent="explorer" unique_id=2049909644]
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("28_2u7jv")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="explorer" unique_id=381685949]
+offset_left = 204.0
+offset_top = 5.0
+offset_right = 332.0
+offset_bottom = 133.0
+texture = ExtResource("28_2u7jv")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="explorer" unique_id=1068198214]
+offset_left = 413.0
+offset_top = 3.0
+offset_right = 541.0
+offset_bottom = 131.0
+texture = ExtResource("28_2u7jv")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="explorer" unique_id=541157309]
+offset_left = 604.0
+offset_top = 8.0
+offset_right = 732.0
+offset_bottom = 136.0
+texture = ExtResource("28_2u7jv")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="explorer" unique_id=1998773508]
+offset_left = 33.0
+offset_top = 136.0
+offset_right = 91.0
+offset_bottom = 186.0
+theme_override_font_sizes/font_size = 36
+text = "C:\\"
+
+[node name="Label2" type="Label" parent="explorer" unique_id=786461602]
+offset_left = 224.0
+offset_top = 139.0
+offset_right = 319.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 36
+text = "D:\\"
+
+[node name="Label3" type="Label" parent="explorer" unique_id=2144352230]
+offset_left = 435.0
+offset_top = 144.0
+offset_right = 530.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 36
+text = "L:\\"
+
+[node name="Label4" type="Label" parent="explorer" unique_id=298222805]
+offset_left = 534.0
+offset_top = 144.0
+offset_right = 796.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 36
+text = "F:\\ (floppy disc)"
+
+[node name="Paint" type="Window" parent="." unique_id=194839149]
+oversampling_override = 1.0
+title = "Paint"
+position = Vector2i(0, 36)
+size = Vector2i(1080, 660)
+visible = false
+script = ExtResource("30_24dk6")
+
+[node name="ControlI" type="Control" parent="Paint" unique_id=867952050]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1082.0
+offset_bottom = 658.0
+script = ExtResource("31_24dk6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Paint/ControlI" unique_id=1484138803]
+
+[node name="Line2D" type="Line2D" parent="Paint/ControlI/CanvasLayer" unique_id=730399398]
+
+[node name="BOTTOM" type="Button" parent="Paint/ControlI" unique_id=435726267]
+layout_mode = 0
+offset_right = 134.0
+offset_bottom = 50.0
+text = "trocar cor"
+icon = ExtResource("4_bjha6")
+
+[node name="ColorRect" type="ColorRect" parent="Paint/ControlI" unique_id=1982023023]
+layout_mode = 0
+offset_left = 149.0
+offset_right = 1081.0
+offset_bottom = 660.0
+
+[node name="screen" type="Window" parent="." unique_id=1378630619]
+oversampling_override = 1.0
+title = "screen"
+position = Vector2i(492, 200)
+size = Vector2i(300, 300)
+visible = false
+script = ExtResource("34_cnnru")
+
+[node name="TextureRect" type="TextureRect" parent="screen" unique_id=112801179]
+offset_right = 300.0
+offset_bottom = 139.0
+texture = ExtResource("1_wtcfe")
+expand_mode = 1
+
+[node name="MenuButton" type="MenuButton" parent="screen" unique_id=2137779035]
+offset_left = 5.0
+offset_top = 142.0
+offset_right = 162.0
+offset_bottom = 175.0
+text = "resolução"
+flat = false
+item_count = 9
+popup/item_0/text = "800x600"
+popup/item_0/id = 0
+popup/item_1/text = "1020x1800"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+popup/item_3/text = "1366x768"
+popup/item_3/id = 3
+popup/item_4/text = "1920x1080"
+popup/item_4/id = 4
+popup/item_5/text = "4K (ínstavel))"
+popup/item_5/id = 5
+popup/item_6/text = "8K (nunca ouvi falar)"
+popup/item_6/id = 6
+popup/item_7/text = "16k (nem em 2028!)"
+popup/item_7/id = 7
+popup/item_8/text = "32k (tá querendo me fritar?)"
+popup/item_8/id = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="screen" unique_id=1894759931]
+offset_top = 179.0
+offset_right = 300.0
+offset_bottom = 299.0
+text = "conquistas do bonzi:
+1. primeiro contato
+2. amigo do bonzi (escute ele 10 vezes)
+3. bonzi te ameaçou (ele precisa falar que vai destruir seu pc umas 3 vezes)"
+
+[connection signal="pressed" from="MEMZ" to="." method="_on_memz_pressed"]
+[connection signal="pressed" from="start" to="Control/TextureRect" method="_on_start_pressed"]
+[connection signal="hidden" from="Control/TextureRect" to="start" method="_on_texture_rect_hidden"]
+[connection signal="pressed" from="Control/TextureRect/ShutdownButton" to="Control/TextureRect/ShutdownButton" method="_on_pressed"]
+[connection signal="pressed" from="Control/TextureRect/NotepadButton" to="Control/TextureRect/NotepadButton" method="_on_pressed"]
+[connection signal="pressed" from="Control/TextureRect/NotepadButton" to="Window" method="_on_notepad_button_pressed"]
+[connection signal="visibility_changed" from="Control/TextureRect/NotepadButton" to="Window" method="_on_notepad_button_visibility_changed"]
+[connection signal="pressed" from="Control/TextureRect/PainelButton" to="ControlPainel" method="_on_painel_button_pressed"]
+[connection signal="pressed" from="Control/TextureRect/internet" to="internet explorer" method="_on_internet_pressed"]
+[connection signal="pressed" from="Control/TextureRect/Bonzi" to="Bonzi" method="_on_bonzi_pressed"]
+[connection signal="pressed" from="Control/TextureRect/Button" to="explorer" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/TextureRect/paintbutton" to="Paint" method="_on_paintbutton_pressed"]
+[connection signal="pressed" from="Control/TextureRect/Button2" to="Control/TextureRect/Button2/ConfirmationDialog" method="_on_button_pressed"]
+[connection signal="close_requested" from="Window" to="Window" method="_on_close_requested"]
+[connection signal="script_changed" from="Window" to="Control/TextureRect/NotepadButton" method="_on_window_script_changed"]
+[connection signal="visibility_changed" from="Window" to="Control/TextureRect/NotepadButton" method="_on_window_visibility_changed"]
+[connection signal="close_requested" from="ControlPainel" to="ControlPainel" method="_on_close_requested"]
+[connection signal="pressed" from="ControlPainel/CursorButton" to="cursor" method="_on_cursor_button_pressed"]
+[connection signal="pressed" from="ControlPainel/Button" to="screen" method="_on_button_pressed"]
+[connection signal="close_requested" from="cursor" to="cursor" method="_on_close_requested"]
+[connection signal="pressed" from="bonzi" to="Bonzi" method="bonzi_pressed"]
+[connection signal="close_requested" from="internet explorer" to="internet explorer" method="_on_close_requested"]
+[connection signal="pressed" from="internet explorer/Bonzi" to="Control/TextureRect/Bonzi" method="_on_bonzi_pressed"]
+[connection signal="pressed" from="internet explorer/Bonzi" to="bonzi" method="_on_bonzi_pressed"]
+[connection signal="pressed" from="internet explorer/memz" to="MEMZ" method="_on_memz_pressed"]
+[connection signal="ready" from="Bonzi" to="Bonzi" method="_ready"]
+[connection signal="ready" from="Bonzi/RichTextLabel" to="Bonzi/RichTextLabel" method="_ready"]
+[connection signal="close_requested" from="explorer" to="explorer" method="_on_close_requested"]
+[connection signal="close_requested" from="Paint" to="Paint" method="_on_close_requested"]
+[connection signal="ready" from="Paint" to="Paint" method="_ready"]
+[connection signal="pressed" from="Paint/ControlI/BOTTOM" to="Paint/ControlI" method="change_color"]
+[connection signal="close_requested" from="screen" to="screen" method="_on_close_requested"]
