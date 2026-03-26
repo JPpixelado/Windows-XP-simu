@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bhjo6isy8vwep"]
+
+[ext_resource type="Texture2D" uid="uid://cj4hhtbu50ma7" path="res://windows-xp-logo.webp" id="1_0fbet"]
+[ext_resource type="AudioStream" uid="uid://dxxtho4ou38at" path="res://windows-r-xp-shutdown.mp3" id="2_62e2m"]
+[ext_resource type="Script" uid="uid://hrc5klkbprnc" path="res://timer.gd" id="3_qtu10"]
+[ext_resource type="Texture2D" uid="uid://brqjwbxomk6kw" path="res://icon.svg" id="4_kbped"]
+[ext_resource type="Script" uid="uid://dm0el7md0nfyv" path="res://button.gd" id="5_fj5cn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_62e2m"]
+
+[node name="shutdown" type="Control" unique_id=1874057678]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 223.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Timer" type="Timer" parent="." unique_id=1893154667]
+wait_time = 5.0
+one_shot = true
+autostart = true
+script = ExtResource("3_qtu10")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=323647104]
+layout_mode = 0
+offset_right = 1949.0
+offset_bottom = 1166.0
+color = Color(0, 0.39215687, 1, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=487860413]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 469.0
+offset_right = 124.0
+offset_bottom = 492.0
+scale = Vector2(8, 8)
+theme_override_font_sizes/font_size = 72
+text = "desligando..."
+label_settings = SubResource("LabelSettings_62e2m")
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="WindowsXpLogo" type="Sprite2D" parent="." unique_id=1845482831]
+position = Vector2(605, 234)
+scale = Vector2(1.4203489, 1.2081395)
+texture = ExtResource("1_0fbet")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=899950978]
+stream = ExtResource("2_62e2m")
+volume_db = 2.916
+autoplay = true
+
+[node name="Button" type="Button" parent="." unique_id=836641665]
+layout_mode = 0
+offset_top = 13.0
+offset_right = 491.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 72
+text = "reinstalar"
+icon = ExtResource("4_kbped")
+script = ExtResource("5_fj5cn")
+
+[connection signal="ready" from="Timer" to="Timer" method="_on_ready"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://le1c471gknoc"]
+
+[ext_resource type="AudioStream" uid="uid://dgv3ptj0jjaoq" path="res://title.mp3" id="1_kfchy"]
+[ext_resource type="Script" uid="uid://cyd2imnt0rp3" path="res://buttonn.gd" id="2_8nyfg"]
+
+[node name="Control" type="Control" unique_id=1849520219]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=967211560]
+layout_mode = 0
+offset_right = 1751.0
+offset_bottom = 897.0
+color = Color(0, 0.3529412, 1, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=309983291]
+stream = ExtResource("1_kfchy")
+volume_db = 13.607
+autoplay = true
+
+[node name="AcceptDialog" type="AcceptDialog" parent="." unique_id=759670764]
+oversampling_override = 1.0
+position = Vector2i(554, 206)
+size = Vector2i(238, 100)
+visible = true
+ok_button_text = "Sim"
+dialog_text = "Quer Instalar o Windows XP?"
+
+[node name="Button" type="Button" parent="AcceptDialog" unique_id=2056873676]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 230.0
+offset_bottom = 101.0
+script = ExtResource("2_8nyfg")
+
+[connection signal="pressed" from="AcceptDialog/Button" to="AcceptDialog/Button" method="_on_pressed"]

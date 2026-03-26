@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://b184plvkre7tw"]
+
+[ext_resource type="Texture2D" uid="uid://dwtc0pbe2j5dt" path="res://windows-xp-horror-edition.webp" id="1_y3tk0"]
+[ext_resource type="Texture2D" uid="uid://dgcbiaii785vk" path="res://MEMZicon5.webp" id="2_7ley2"]
+[ext_resource type="Texture2D" uid="uid://bew8wx0xwep85" path="res://MEMZicon3.svg" id="3_bk32r"]
+[ext_resource type="Texture2D" uid="uid://c0oaio0k4i306" path="res://MEMZicon2.svg" id="4_ia15n"]
+[ext_resource type="AudioStream" uid="uid://xuhockijnil2" path="res://windows-xp-horror-edition-startup.mp3" id="5_f1bnf"]
+[ext_resource type="Script" uid="uid://cskw6er3amtmo" path="res://buttonnnn.gd" id="6_7ley2"]
+
+[node name="Node2D" type="Node2D" unique_id=629764788]
+
+[node name="WindowsXpHorrorEdition" type="Sprite2D" parent="." unique_id=544531031]
+position = Vector2(1211.0001, 827.50006)
+scale = Vector2(6.008, 5.8754454)
+texture = ExtResource("1_y3tk0")
+
+[node name="Label" type="Label" parent="." unique_id=1755112219]
+offset_left = 43.0
+offset_top = 191.0
+offset_right = 1249.0
+offset_bottom = 464.0
+theme_override_font_sizes/font_size = 200
+text = "SAIA! RUN!"
+
+[node name="MemZicon5" type="Sprite2D" parent="." unique_id=2020519043]
+position = Vector2(232, 169.00006)
+scale = Vector2(1.5861111, 1.4277778)
+texture = ExtResource("2_7ley2")
+
+[node name="MemZicon3" type="Sprite2D" parent="." unique_id=1923573540]
+position = Vector2(564.99994, 315.00003)
+scale = Vector2(6.3500023, 5.5400004)
+texture = ExtResource("3_bk32r")
+
+[node name="MemZicon2" type="Sprite2D" parent="." unique_id=1081751099]
+position = Vector2(983.00006, 161)
+scale = Vector2(6.46, 6.96)
+texture = ExtResource("4_ia15n")
+
+[node name="WindowsXpHorrorEditionStartup" type="AudioStreamPlayer2D" parent="." unique_id=258447712]
+position = Vector2(382, 546)
+stream = ExtResource("5_f1bnf")
+volume_db = 13.0
+autoplay = true
+
+[node name="Button" type="Button" parent="." unique_id=750184123]
+offset_left = -45.0
+offset_top = 329.0
+offset_right = 323.0
+offset_bottom = 697.0
+icon = ExtResource("2_7ley2")
+script = ExtResource("6_7ley2")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

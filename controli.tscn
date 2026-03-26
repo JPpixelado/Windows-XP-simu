@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://ccy8xnwapm2ln"]
+
+[ext_resource type="Texture2D" uid="uid://bu0ilxkwq5o82" path="res://startmenu.png" id="1_04vmu"]
+[ext_resource type="Script" uid="uid://dabl0184vxk4i" path="res://buttonnn.gd" id="2_6da1b"]
+[ext_resource type="AudioStream" uid="uid://dgv3ptj0jjaoq" path="res://title.mp3" id="3_6da1b"]
+[ext_resource type="Texture2D" uid="uid://bew8wx0xwep85" path="res://MEMZicon3.svg" id="4_7kb4t"]
+[ext_resource type="Script" uid="uid://cmicwhqaahk4p" path="res://button_2.gd" id="5_30w82"]
+
+[node name="Control" type="Control" unique_id=45221789]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1933832068]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0, 0, 1, 1)
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=300373589]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 18.0
+offset_right = 305.0
+offset_bottom = 198.0
+placeholder_text = "nome de usuário e senha..."
+
+[node name="AcceptDialog" type="AcceptDialog" parent="." unique_id=1762512082]
+oversampling_override = 1.0
+position = Vector2i(320, 50)
+size = Vector2i(253, 100)
+visible = true
+ok_button_text = "Sim"
+dialog_text = "você concorda com os termos?"
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=900919634]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 163.0
+offset_right = 565.0
+offset_bottom = 206.0
+theme_override_font_sizes/font_size = 34
+button_pressed = true
+text = "antivírus"
+
+[node name="Button" type="Button" parent="." unique_id=928806710]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 298.0
+offset_right = 216.0
+offset_bottom = 369.0
+text = "iniciar sistema"
+icon = ExtResource("1_04vmu")
+script = ExtResource("2_6da1b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1500847118]
+stream = ExtResource("3_6da1b")
+volume_db = 13.0
+autoplay = true
+
+[node name="TextEdit" type="TextEdit" parent="AudioStreamPlayer" unique_id=1148219096]
+offset_left = 14.0
+offset_top = 218.0
+offset_right = 568.0
+offset_bottom = 276.0
+placeholder_text = "key..."
+
+[node name="CheckButton2" type="CheckButton" parent="." unique_id=1499082867]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 310.0
+offset_right = 531.0
+offset_bottom = 359.0
+text = "quer receber atualizações de segurança até 2028?"
+
+[node name="Label" type="Label" parent="." unique_id=1452786483]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 607.0
+offset_right = 1108.0
+offset_bottom = 643.0
+text = "key: 193248903284098"
+
+[node name="Button2" type="Button" parent="." unique_id=1693455779]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 377.0
+offset_right = 459.0
+offset_bottom = 576.0
+theme_override_font_sizes/font_size = 72
+text = "super secreto!!!"
+icon = ExtResource("4_7kb4t")
+script = ExtResource("5_30w82")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
